@@ -60,33 +60,16 @@
 
 .img-container {
   width: 100%;
-  /* Cor de fundo que aparece antes da imagem começar a carregar */
-  background-color: #e0e0e0; 
-  overflow: hidden; /* Essencial para esconder as bordas borradas */
-  
-  /* Mantém a proporção 16:9. Ajuste se suas imagens forem diferentes. */
-  aspect-ratio: 16 / 9; 
-  border-radius: 8px 8px 0 0; /* Arredonda os cantos superiores */
+  height: 100%;
+  background-color: #e0e0e0;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
 }
 
 .card-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Garante que a imagem cubra o contêiner sem distorcer */
-  
-  /* O EFEITO INICIAL */
-  /* Borra a imagem e dá um leve zoom para que as bordas borradas não fiquem visíveis */
-  filter: blur(20px);
-  transform: scale(1.1);
-  
-  /* A TRANSIÇÃO SUAVE */
-  /* Define como a imagem vai voltar ao normal */
-  transition: filter 0.4s ease-out, transform 0.6s ease-out;
-}
-
-/* CLASSE QUE SERÁ ADICIONADA VIA JAVASCRIPT */
-/* Quando a imagem estiver carregada, ela terá essa classe */
-.card-image.loaded {
-  filter: blur(0);
-  transform: scale(1);
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }

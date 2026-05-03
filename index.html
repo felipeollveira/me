@@ -1,64 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Oliveira</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/contact.css">
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/projects.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Felipe Oliveira — Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/projects.css">
   <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="icon" type="image/x-icon" href="/images/icon.png" >
-
-
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="/images/icon.png">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
-    <header>
-    <div class="logo">
-      <div class="icons">
-        <div class="icon"></div>
-    </div>
-    </div>
-    
-  </header>
+  <header>
+    <div class="logo"></div>
+    <nav class="header-nav">
+      <a href="#portfolio-container"></a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
 
-    <section class="hero">
-    <img src="https://media.licdn.com/dms/image/v2/D4D03AQFhd1h91XLocw/profile-displayphoto-scale_400_400/B4DZlj8qcCJMAg-/0/1758318473134?e=2147483647&v=beta&t=5h2iRWCdS6RHzgM7dBpSIoD5_cuiqCiJgZtdfLhPTB8" alt="Foto de Perfil">
-    <h1>Eu sou <span>Felipe Oliveira</span></h1>
-   
-    <p>
-   Tive o prazer de trabalhar com pessoas e empresas incríveis, desenvolvendo novos apps e otimizando produtos existentes. Confira alguns dos resultados abaixo.
-   </p>
-    
-    <p class="skills">
-      <span>#Code</span>
-      <span>#SoftwareEngineer</span>
-      <span>#AdobePhotoshop</span>
-      <span>#Portfolio</span>
-      <span>#GraphicDesigner</span>
-      <span>#DesignInspiration</span>
-      <span>#MadeWithCode</span>
-      <span>#VideoMaker</span>
-      <span>#CloudServices</span>
-      <span>#Automatic</span>
-    </p>
-    
-    <span>
-     
-    </span> 
-    <div class="filters">
-      <button class="active" data-filter="all" aria-label="all">All</button>
-      <button data-filter="dev" aria-label="Apps & Dev">Apps & Dev</button>
-      <button data-filter="digital" aria-label="Digital Arts">Digital Arts</button>
-      <button data-filter="film" aria-label="Films">Films</button>
-      <button data-filter="web" aria-label="Web Design & Developer">Web Design & Developer</button>
-    </div>
-  </section>
-  
+  <section class="hero">
+    <img src="https://media.licdn.com/dms/image/v2/D4D03AQHyt5DaGfp4Rw/profile-displayphoto-scale_400_400/B4DZwJ4Z5dKgAg-/0/1769692309252?e=1779321600&v=beta&t=pNAN4UJulEAQ-ssiiJ4YTjabTdWQ21sxMK86AbOnL58" alt="Felipe Oliveira">
+    <h1><span>Felipe Oliveira</span></h1>
+    <p class="hero-role">Software Engineer</p>
+    <p class="hero-bio">Tive o prazer de trabalhar em diversos projetos e conhecer pessoas incríveis.
+      <br> Veja alguns dos meus trabalhos!</p>
+    <div class="tech-stack">
+      <span>AI</span>
+      <span>Flutter/Dart</span>
+      <span>IOS</span>
+      <span>Python</span>
+      <span>TypeScript</span>
+      <span>Linux</span>
+    </div>
+    <div class="filters">
+      <button class="active" data-filter="all" aria-label="all">Todos</button>
+      <button data-filter="dev" aria-label="Apps & Dev">Apps & Dev</button>
+      <button data-filter="AI" aria-label="AI">AI</button>
+      <button data-filter="Bots" aria-label="Bots">Bots</button>
+      <button data-filter="web" aria-label="Web Design & Developer">Web</button>
+    </div>
+  </section>
+
   <section class="portfolio" id="portfolio-container">
     <div class="skeleton-item">
       <div class="skeleton-img"></div>
@@ -74,15 +64,13 @@
         <div class="skeleton-text"></div>
       </div>
     </div>
-   
-    </section>
+  </section>
 
   <template id="portfolio-item-template">
     <div class="portfolio-item fade" data-category="">
-      
       <div class="img-container">
-        <img src="" alt="" class="card-image"> </div>
-
+        <img class="card-image" src="" alt="">
+      </div>
       <h3></h3>
       <div class="overlay">
         <p></p>
@@ -91,22 +79,40 @@
     </div>
   </template>
 
-    <section class="contato">
-    <h2>Entre em contato</h2>
-    <p>Interessado em colaborar? Vamos conversar!</p>
-    <div class="social">
-      <a title="LinkedIn" href="https://www.linkedin.com/in/ollveira" target="_blank" rel="noopener noreferrer" style="transform: none;"><svg stroke="currentColor" fill="#0A66C2" stroke-width="0" viewBox="0 0 448 512" class="w-8 h-8 text-blue-500 hover:text-blue-700" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg></a>
-      <a title="GitHub" href="https://github.com/felipeollveira" target="_blank" rel="noopener noreferrer" style="transform: none;"><svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 496 512" class="w-8 h-8 text-gray-200 hover:text-gray-500" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
-      <a title="Email" href="mailto:felipejesus.oliveira@ucsal.edu.br" target="_blank" rel="noopener noreferrer" style="transform: none;"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="w-8 h-8 text-gray-200 hover:text-gray-500" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg></a>
-    </div>
-  </section>
+  <section class="contato" id="contato">
+    <h2>Entre em contato</h2>
+    <div class="social">
+      <a title="LinkedIn" href="https://www.linkedin.com/in/ollveira" target="_blank" rel="noopener noreferrer">
+        <svg stroke="currentColor" fill="#0A66C2" stroke-width="0" viewBox="0 0 448 512" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>
+      </a>
+      <a title="GitHub" href="https://github.com/felipeollveira" target="_blank" rel="noopener noreferrer">
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+      </a>
+      <a title="Email" href="mailto:felipejesus.oliveira@ucsal.edu.br" target="_blank" rel="noopener noreferrer">
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg>
+      </a>
+    </div>
+  </section>
 
-  <footer>
-    © 2025 MeuPortfólio. Todos os direitos reservados.
-  </footer>
+  <footer>
+    &copy; 2025 Felipe Oliveira
+  </footer>
 
-  <script type="text/javascript" src="js/display.js"></script>
-  <script type="text/javascript" src="js/data.js"></script>
-  
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close" aria-label="Fechar">&times;</button>
+      <img class="modal-img" id="modal-img" src="" alt="">
+      <div class="modal-body">
+        <h2 id="modal-title"></h2>
+        <div class="modal-techs" id="modal-techs"></div>
+        <p id="modal-desc"></p>
+        <a id="modal-link" href="#" target="_blank" rel="noopener noreferrer">Acessar Projeto &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/display.js"></script>
+  <script type="text/javascript" src="js/data.js"></script>
+
 </body>
 </html>
