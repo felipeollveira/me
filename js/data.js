@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     } catch (error) {
       console.error("Falha ao carregar projetos:", error);
-      portfolioContainer.innerHTML = '<p class="portfolio-error">Não foi possível carregar os projetos.</p>';
+      portfolioContainer.innerHTML = `<p class="portfolio-error">${translations[currentLang].error}</p>`;
     }
   }
 
@@ -37,6 +37,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   fetchProjects();
+
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      setLanguage(btn.dataset.lang);
+      const activeFilter = document.querySelector('.filters button.active');
+      const filter = activeFilter ? activeFilter.dataset.filter : 'all';
+      const filtered = filter === 'all' ? allProjects : allProjects.filter(p => p.category === filter);
+      displayProjects(filtered);
+    });
+  });
 
   document.getElementById('modal-close').addEventListener('click', closeModal);
   document.getElementById('project-modal').addEventListener('click', e => {

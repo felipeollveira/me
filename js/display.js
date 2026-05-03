@@ -54,7 +54,7 @@ function displayProjects(projectsToDisplay) {
   portfolioContainer.innerHTML = '';
 
   if (projectsToDisplay.length === 0 && allProjects.length > 0) {
-    portfolioContainer.innerHTML = '<p class="portfolio-empty">Nenhum projeto encontrado.</p>';
+    portfolioContainer.innerHTML = `<p class="portfolio-empty">${translations[currentLang].empty}</p>`;
     return;
   }
 
@@ -69,7 +69,7 @@ function displayProjects(projectsToDisplay) {
     cardClone.querySelector('.overlay p').textContent = project.description;
 
     const linkEl = cardClone.querySelector('.overlay a');
-    linkEl.textContent = 'Ver Detalhes';
+    linkEl.textContent = translations[currentLang].card_details;
     linkEl.removeAttribute('href');
 
     const techMap = {
