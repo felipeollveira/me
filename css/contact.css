@@ -1,37 +1,52 @@
- /* CONTATO */
-    .contato {
-      text-align: center;
-      padding: 60px 20px;
-      background: #f9f9f9;
-    }
+/* CONTACT */
+.contato {
+  text-align: center;
+  padding: 70px 20px;
+}
 
-    .contato h2 {
-      margin-bottom: 20px;
-      font-size: 1.8rem;
-    }
+.contato h2 {
+  margin-bottom: 10px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
 
-    .social {
-      margin-top: 20px;
-    }
+.contato p {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 28px;
+}
 
-    .social a {
-      margin: 0 10px;
-      font-size: 1.1rem;
-      color: #0073ff;
-      transition: 0.3s;
-    }
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 
-    .social a:hover {
-      color: #0056b3;
-    }
+.social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  transition: border-color 0.2s, transform 0.2s;
+  color: #333;
+}
 
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #fff;
-      border-top: 1px solid #eee;
-      margin-top: 50px;
-      font-size: 0.9rem;
-      color: #666;
-    }
+.social a:hover {
+  border-color: #bbb;
+  transform: translateY(-2px);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 24px;
+  background: #fff;
+  border-top: 1px solid #f0f0f0;
+  font-size: 0.85rem;
+  color: #999;
+}

@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
       
     try {
-      const response = await fetch('https://projects-tau-pearl.vercel.app/api/projects');
+       const response = await fetch('https://projects-tau-pearl.vercel.app/api/projects');
+     // const response = await fetch('/projects.json'); // Para desenvolvimento local, use um arquivo JSON
       if (!response.ok) throw new Error(`Erro na rede! Status: ${response.status}`);
       
       const projects = await response.json();
@@ -19,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     } catch (error) {
       console.error("Falha ao carregar projetos:", error);
-      portfolioContainer.innerHTML = '<p class="portfolio-error">Não foi possível carregar os projetos.</p>';
+      portfolioContainer.innerHTML = `<p class="portfolio-error">${translations[currentLang].error}</p>`;
     }
   }
 
@@ -36,4 +37,22 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   fetchProjects();
+
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      setLanguage(btn.dataset.lang);
+      const activeFilter = document.querySelector('.filters button.active');
+      const filter = activeFilter ? activeFilter.dataset.filter : 'all';
+      const filtered = filter === 'all' ? allProjects : allProjects.filter(p => p.category === filter);
+      displayProjects(filtered);
+    });
+  });
+
+  document.getElementById('modal-close').addEventListener('click', closeModal);
+  document.getElementById('project-modal').addEventListener('click', e => {
+    if (e.target === e.currentTarget) closeModal();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeModal();
+  });
 });
