@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
       
     try {
-       const response = await fetch('https://projects-tau-pearl.vercel.app/api/projects');
-     // const response = await fetch('/projects.json'); // Para desenvolvimento local, use um arquivo JSON
+      //const response = await fetch('https://projects-tau-pearl.vercel.app/api/projects');
+      const response = await fetch('/projects.json'); // Para desenvolvimento local, use um arquivo JSON
       if (!response.ok) throw new Error(`Erro na rede! Status: ${response.status}`);
       
       const projects = await response.json();

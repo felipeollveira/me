@@ -50,6 +50,10 @@ function setLanguage(lang) {
     el.textContent = translations[lang].card_details;
   });
 
+  if (typeof currentModalProject !== 'undefined' && currentModalProject) {
+    document.getElementById('modal-desc').textContent = getDesc(currentModalProject);
+  }
+
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });

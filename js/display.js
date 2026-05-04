@@ -2,6 +2,11 @@ const buttons = document.querySelectorAll(".filters button");
 const portfolioContainer = document.getElementById("portfolio-container");
 const template = document.getElementById('portfolio-item-template');
 let allProjects = [];
+let currentModalProject = null;
+
+function getDesc(project) {
+  return currentLang === 'pt' && project.description_pt ? project.description_pt : project.description;
+}
 
 function driveThumb(url) {
   if (!url) return '';
@@ -18,12 +23,13 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 
 function openModal(project) {
+  currentModalProject = project;
   const iframe = document.getElementById('modal-img');
   iframe.src = project.image || '';
   iframe.title = project.title;
 
   document.getElementById('modal-title').textContent = project.title;
-  document.getElementById('modal-desc').textContent = project.description;
+  document.getElementById('modal-desc').textContent = getDesc(project);
 
   const techsEl = document.getElementById('modal-techs');
   techsEl.innerHTML = '';
@@ -46,6 +52,7 @@ function openModal(project) {
 }
 
 function closeModal() {
+  currentModalProject = null;
   document.getElementById('project-modal').classList.remove('open');
   document.body.style.overflow = '';
 }
@@ -66,7 +73,7 @@ function displayProjects(projectsToDisplay) {
     img.alt = project.title;
 
     cardClone.querySelector('.portfolio-item').dataset.category = project.category;
-    cardClone.querySelector('.overlay p').textContent = project.description;
+    cardClone.querySelector('.overlay p').textContent = getDesc(project);
 
     const linkEl = cardClone.querySelector('.overlay a');
     linkEl.textContent = translations[currentLang].card_details;
