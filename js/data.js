@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!response.ok) throw new Error(`Erro na rede! Status: ${response.status}`);
       
       const projects = await response.json();
-      allProjects = projects;
+      allProjects = projects.sort(() => Math.random() - 0.5);
 
       displayProjects(allProjects);
 
