@@ -23,6 +23,8 @@ header {
 .header-nav {
   display: flex;
   gap: 28px;
+  width: 100%;
+  justify-content: flex-end;
 }
 
 .header-nav a {
@@ -65,4 +67,11 @@ header {
 
 .lang-btn:hover:not(.active) {
   color: #777;
+}
+
+@media (max-width: 560px) {
+  .header-nav {
+  display: flex;
+  gap: 28px;
+}
 }

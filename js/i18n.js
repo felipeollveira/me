@@ -1,7 +1,7 @@
 const translations = {
   pt: {
     nav_projects:  'Projetos',
-    nav_contact:   'Contato',
+    nav_store:   'Loja',
     hero_bio:      'Tive o prazer de trabalhar em diversos projetos e conhecer pessoas incríveis.<br>Veja alguns dos meus trabalhos!',
     filter_all:    'Todos',
     filter_dev:    'Apps & Dev',
@@ -16,7 +16,7 @@ const translations = {
   },
   en: {
     nav_projects:  'Projects',
-    nav_contact:   'Contact',
+    nav_store:   'Store',
     hero_bio:      "I've had the pleasure of working on diverse projects and meeting incredible people.<br>Check out some of my work!",
     filter_all:    'All',
     filter_dev:    'Apps & Dev',

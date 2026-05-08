@@ -19,10 +19,9 @@
 <body>
 
   <header>
-    <div class="logo"></div>
     <nav class="header-nav">
-      <a href="#portfolio-container" data-i18n="nav_projects">Projetos</a>
-      <a href="#contato" data-i18n="nav_contact">Contato</a>
+      <a href="#projects" data-i18n="nav_projects">Projetos</a>
+      <!-- <a href="#/store" data-i18n="nav_store">Loja</a> -->
       <div class="lang-switch">
         <button class="lang-btn" data-lang="pt">PT</button>
         <button class="lang-btn" data-lang="en">EN</button>
@@ -31,10 +30,14 @@
   </header>
 
   <section class="hero">
+   
     <img src="https://media.licdn.com/dms/image/v2/D4D03AQHyt5DaGfp4Rw/profile-displayphoto-scale_400_400/B4DZwJ4Z5dKgAg-/0/1769692309252?e=1779321600&v=beta&t=pNAN4UJulEAQ-ssiiJ4YTjabTdWQ21sxMK86AbOnL58" alt="Felipe Oliveira">
     <h1><span>Felipe Oliveira</span></h1>
     <p class="hero-role">Software Engineer</p>
     <p class="hero-bio" data-i18n="hero_bio">Tive o prazer de trabalhar em diversos projetos e conhecer pessoas incríveis.<br>Veja alguns dos meus trabalhos!</p>
+    
+    <span id="projects"></span>
+    
     <div class="tech-stack">
       <span>AI</span>
       <span>Flutter/Dart</span>
@@ -43,6 +46,7 @@
       <span>TypeScript</span>
       <span>Linux</span>
     </div>
+     
     <div class="filters">
       <button class="active" data-filter="all" data-i18n="filter_all">Todos</button>
       <button data-filter="dev" data-i18n="filter_dev">Apps & Dev</button>
@@ -82,6 +86,11 @@
     </div>
   </template>
 
+  <section class="store" id="store" style="display:none">
+    <h2>Loja</h2>
+    <p>Em breve...</p>
+  </section>
+
   <section class="contato" id="contato">
     <h2 data-i18n="contact_title">Entre em contato</h2>
     <div class="social">
@@ -114,6 +123,7 @@
     </div>
   </div>
 
+  <script type="text/javascript" src="js/router.js"></script>
   <script type="text/javascript" src="js/i18n.js"></script>
   <script type="text/javascript" src="js/display.js"></script>
   <script type="text/javascript" src="js/data.js"></script>

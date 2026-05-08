@@ -131,6 +131,7 @@
 }
 
 @media (max-width: 560px) {
+
   .portfolio {
     grid-template-columns: auto auto;
     grid-auto-rows: 220px;
@@ -143,8 +144,8 @@
 }
 
   .portfolio-item.featured {
-    grid-column: span 2;
-    grid-row: span 1;
+    grid-column: span 1;
+    grid-row: span 2;
     background-size: contain;
   }
   .portfolio-item .overlay {
