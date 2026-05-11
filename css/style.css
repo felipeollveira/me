@@ -34,7 +34,7 @@ a {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 24px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
 .hero h1 {
@@ -45,7 +45,8 @@ a {
 }
 
 .hero h1 span {
-  background: #0ec71a9c;
+  background: #723c2c00;
+  color: #895f4a;
   padding: 2px 8px;
   border-radius: 4px;
 }
