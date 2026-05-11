@@ -1,22 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  
-  async function fetchProjects() {
-    // Antes de buscar, você pode encher a tela com "templates" vazios para simular os skeletons
-    // Isso cria o espaço que os cards vão ocupar
+  function getActiveFilter() {
+    const activeBtn = document.querySelector('.filters button.active');
+    return activeBtn ? activeBtn.getAttribute('data-filter') : 'all';
+  }
+
+  function showSkeletons() {
+    portfolioContainer.innerHTML = '';
     for (let i = 0; i < 6; i++) {
       portfolioContainer.appendChild(template.content.cloneNode(true));
     }
-      
+  }
+
+  async function fetchProjects(lang = currentLang) {
+    showSkeletons();
+
     try {
-      const response = await fetch('https://projects-tau-pearl.vercel.app/api/projects');
-      //const response = await fetch('/projects.json'); // Para desenvolvimento local, use um arquivo JSON
+      const response = await fetch(`https://projects-tau-pearl.vercel.app/api/projects?lang=${lang}`);
       if (!response.ok) throw new Error(`Erro na rede! Status: ${response.status}`);
-      
+
       const projects = await response.json();
       allProjects = projects.sort(() => Math.random() - 0.5);
 
-      displayProjects(allProjects);
+      const filter = getActiveFilter();
+      const filtered = filter === 'all' ? allProjects : allProjects.filter(p => p.category === filter);
+      displayProjects(filtered);
 
     } catch (error) {
       console.error("Falha ao carregar projetos:", error);
@@ -29,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelector(".filters button.active").classList.remove("active");
       btn.classList.add("active");
       const filter = btn.getAttribute("data-filter");
-      const filteredProjects = (filter === "all")
+      const filteredProjects = filter === "all"
         ? allProjects
         : allProjects.filter(project => project.category === filter);
       displayProjects(filteredProjects);
@@ -41,10 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       setLanguage(btn.dataset.lang);
-      const activeFilter = document.querySelector('.filters button.active');
-      const filter = activeFilter ? activeFilter.dataset.filter : 'all';
-      const filtered = filter === 'all' ? allProjects : allProjects.filter(p => p.category === filter);
-      displayProjects(filtered);
+      fetchProjects(btn.dataset.lang);
     });
   });
 

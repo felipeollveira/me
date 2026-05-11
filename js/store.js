@@ -5,6 +5,7 @@ const typeConfig = {
   script:    { label: 'store_tag_script',   icon: 'fab fa-python'      },
   template:  { label: 'store_tag_template', icon: 'fab fa-android'     },
   mentoring: { label: 'store_tag_mentoring',icon: 'fas fa-video'       },
+  ai:        { label: 'store_tag_ai',       icon: 'fas fa-robot'       },
 };
 
 function formatPrice(product) {
@@ -16,7 +17,7 @@ function renderBuyBtn(product) {
   if (product.type === 'app') {
     return `
       <a href="${product.link}" target="_blank" rel="noopener noreferrer" class="store-btn store-btn--play">
-        <i class="fab fa-google-play"></i> Play Store
+        <i class="fab fa-google-play"></i> ${translations[currentLang].store_btn_play}
       </a>`;
   }
   return `<a href="${product.link}" target="_blank" rel="noopener noreferrer" class="store-btn">${translations[currentLang].store_btn}</a>`;
@@ -66,11 +67,12 @@ function renderSkeletons(grid, count = 3) {
 }
 
 function renderError(grid) {
+  const t = translations[currentLang];
   grid.innerHTML = `
     <div class="store-error">
       <i class="fas fa-exclamation-circle"></i>
-      <p>Não foi possível carregar os produtos.</p>
-      <button class="store-retry-btn" onclick="fetchStoreProducts()">Tentar novamente</button>
+      <p>${t.store_error}</p>
+      <button class="store-retry-btn" onclick="fetchStoreProducts()">${t.store_retry}</button>
     </div>
   `;
 }
