@@ -8,6 +8,7 @@ const routes = {
     document.querySelector('.hero').style.display = 'none';
     document.querySelector('.portfolio').style.display = 'none';
     document.getElementById('store').style.display = '';
+    if (typeof fetchStoreProducts === 'function') fetchStoreProducts();
   },
 };
 

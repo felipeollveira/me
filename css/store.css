@@ -1,0 +1,259 @@
+.store {
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  padding: 60px 20px 0;
+}
+
+.store-hero {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.store-hero h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+.store-hero p {
+  color: #888;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.store-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.store-card {
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.store-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.store-card-img {
+  background: #fafafa;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.store-card-img i {
+  font-size: 3rem;
+  color: #895f4a;
+  opacity: 0.8;
+}
+
+.store-card-img--app {
+  background: #f0f7f0;
+}
+
+.store-card-img--app i {
+  color: #01875f;
+  opacity: 1;
+}
+
+.store-card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.store-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #895f4a;
+}
+
+.store-card-body h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.store-card-body p {
+  font-size: 0.875rem;
+  color: #777;
+  line-height: 1.6;
+}
+
+.store-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.store-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.store-btn {
+  padding: 8px 20px;
+  background: #1a1a1a;
+  color: #fff;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.store-btn:hover {
+  background: #895f4a;
+}
+
+.store-price--free {
+  color: #01875f;
+}
+
+.store-btn--play {
+  background: #01875f;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.store-btn--play:hover {
+  background: #016b4c;
+}
+
+/* SKELETON */
+.store-skeleton {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e8e8e8;
+}
+
+.store-skeleton-img {
+  height: 140px;
+  background: #e0e0e0;
+}
+
+.store-skeleton-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.store-skeleton-tag {
+  width: 60px;
+  height: 12px;
+  background: #e0e0e0;
+  border-radius: 4px;
+}
+
+.store-skeleton-title {
+  width: 75%;
+  height: 18px;
+  background: #e0e0e0;
+  border-radius: 4px;
+}
+
+.store-skeleton-text {
+  width: 100%;
+  height: 13px;
+  background: #e0e0e0;
+  border-radius: 4px;
+}
+
+.store-skeleton-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.store-skeleton-price {
+  width: 50px;
+  height: 18px;
+  background: #e0e0e0;
+  border-radius: 4px;
+}
+
+.store-skeleton-btn {
+  width: 90px;
+  height: 34px;
+  background: #e0e0e0;
+  border-radius: 25px;
+}
+
+/* ERROR */
+.store-error {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  color: #888;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.store-error i {
+  font-size: 2rem;
+  color: #ccc;
+}
+
+.store-error p {
+  font-size: 0.95rem;
+}
+
+.store-retry-btn {
+  margin-top: 4px;
+  padding: 8px 22px;
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s;
+}
+
+.store-retry-btn:hover {
+  background: #895f4a;
+}
+
+.store-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 860px) {
+  .store-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .store-grid {
+    grid-template-columns: 1fr;
+  }
+}

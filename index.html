@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="icon" type="image/x-icon" href="images/green.png">
   <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/store.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
@@ -21,7 +22,7 @@
   <header>
     <nav class="header-nav">
       <a href="#projects" data-i18n="nav_projects">Projetos</a>
-      <!-- <a href="#/store" data-i18n="nav_store">Loja</a> -->
+    <a href="#/store" data-i18n="nav_store">Loja</a> 
       <div class="lang-switch">
         <button class="lang-btn" data-lang="pt">PT</button>
         <button class="lang-btn" data-lang="en">EN</button>
@@ -87,8 +88,12 @@
   </template>
 
   <section class="store" id="store" style="display:none">
-    <h2>Loja</h2>
-    <p>Em breve...</p>
+    <div class="store-hero">
+      <h2 data-i18n="store_title">Loja</h2>
+      <p data-i18n="store_subtitle">Apps, ferramentas e templates que uso</p>
+    </div>
+
+    <div class="store-grid" id="store-grid"></div>
   </section>
 
   <section class="contato" id="contato">
@@ -127,6 +132,7 @@
   <script type="text/javascript" src="js/i18n.js"></script>
   <script type="text/javascript" src="js/display.js"></script>
   <script type="text/javascript" src="js/data.js"></script>
+  <script type="text/javascript" src="js/store.js"></script>
 
 </body>
 </html>
