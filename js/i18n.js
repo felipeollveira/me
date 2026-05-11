@@ -1,11 +1,12 @@
 const translations = {
   pt: {
+    role:         'Engenheiro de Software',
     nav_projects:  'Projetos',
     nav_store:   'Loja',
     hero_bio:      'Tive o prazer de trabalhar em diversos projetos e conhecer pessoas incríveis.<br>Veja alguns dos meus trabalhos!',
     filter_all:    'Todos',
     filter_dev:    'Apps & Dev',
-    filter_ai:     'AI',
+    filter_ai:     'IA & LLMs',
     filter_bots:   'Bots',
     filter_web:    'Web',
     contact_title: 'Entre em contato',
@@ -15,12 +16,13 @@ const translations = {
     error:         'Não foi possível carregar os projetos.',
   },
   en: {
+    role:         'Software Engineer',
     nav_projects:  'Projects',
     nav_store:   'Store',
     hero_bio:      "I've had the pleasure of working on diverse projects and meeting incredible people.<br>Check out some of my work!",
     filter_all:    'All',
     filter_dev:    'Apps & Dev',
-    filter_ai:     'AI',
+    filter_ai:     'AI & LLMs',
     filter_bots:   'Bots',
     filter_web:    'Web',
     contact_title: 'Get in touch',
