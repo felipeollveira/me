@@ -1,5 +1,34 @@
 const STORE_API_URL = 'https://projects-tau-pearl.vercel.app/api/products';
 
+function copyPromoCode(btn) {
+  navigator.clipboard.writeText('FE2026DU').then(() => {
+    btn.textContent = 'Copiado ✓';
+    setTimeout(() => { btn.textContent = 'Copiar'; }, 2000);
+  });
+}
+
+function renderPromoCard() {
+  return `
+    <div class="store-card store-card--promo">
+      <div class="store-card-img store-card-img--edu">
+        <img src="https://res.cloudinary.com/dkvhmmicx/image/upload/v1780196271/gemini_aluno_protagonista_folm94.png" alt="FocusEdu">
+      </div>
+      <div class="store-card-body">
+        <span class="store-tag store-tag--promo">Parceiro</span>
+        <h3>FocusEdu</h3>
+        <p>Plataforma de estudos com foco em resultados. Use o cupom e garanta 25% de desconto.</p>
+        <div class="promo-coupon">
+          <span class="promo-coupon-code">FE2026DU</span>
+          <button class="promo-coupon-copy" onclick="copyPromoCode(this)">Copiar</button>
+        </div>
+        <div class="store-card-footer">
+          <span class="store-price promo-discount">25% OFF</span>
+          <a href="https://www.focusedu.com.br/" target="_blank" rel="noopener noreferrer" class="store-btn">Acessar →</a>
+        </div>
+      </div>
+    </div>`;
+}
+
 const typeConfig = {
   app:       { label: 'store_tag_app',      icon: 'fab fa-google-play' },
   script:    { label: 'store_tag_script',   icon: 'fab fa-python'      },
@@ -88,7 +117,7 @@ async function fetchStoreProducts() {
     if (!res.ok) throw new Error(res.status);
 
     const products = await res.json();
-    grid.innerHTML = products.map(renderStoreCard).join('');
+    grid.innerHTML = renderPromoCard() + products.map(renderStoreCard).join('');
   } catch (err) {
     console.error('Falha ao carregar produtos:', err);
     renderError(grid);
