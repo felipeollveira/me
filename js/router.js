@@ -3,11 +3,15 @@ const routes = {
     document.querySelector('.hero').style.display = '';
     document.querySelector('.portfolio').style.display = '';
     document.getElementById('store').style.display = 'none';
+    document.querySelector('.contato').style.display = '';
+    document.querySelector('footer').style.display = '';
   },
   '/store': () => {
     document.querySelector('.hero').style.display = 'none';
     document.querySelector('.portfolio').style.display = 'none';
     document.getElementById('store').style.display = '';
+    document.querySelector('.contato').style.display = 'none';
+    document.querySelector('footer').style.display = 'none';
     if (typeof fetchStoreProducts === 'function') fetchStoreProducts();
   },
 };

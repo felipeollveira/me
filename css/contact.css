@@ -1,52 +1,158 @@
 /* CONTACT */
 .contato {
-  text-align: center;
-  padding: 70px 20px;
+  padding: 50px 20px;
 }
 
-.contato h2 {
-  margin-bottom: 10px;
-  font-size: 1.7rem;
+.contato-inner {
+  max-width: 1130px;
+  margin: 40px auto 60px;
+  padding: 0 20px;
+}
+
+.contato-eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #6b7280;
+  margin-bottom: 18px;
+}
+
+.contato-heading {
+  font-size: 2.4rem;
   font-weight: 700;
+  color: #000000;
   letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 16px;
 }
 
-.contato p {
-  color: #666;
+.contato-sub {
   font-size: 0.95rem;
-  margin-bottom: 28px;
+  color: #8b949e;
+  line-height: 1.7;
+  max-width: 460px;
+  margin-bottom: 36px;
 }
 
-.social {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.social a {
+.contato-actions {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: #fff;
-  border: 1px solid #e8e8e8;
-  transition: border-color 0.2s, transform 0.2s;
-  color: #333;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 
-.social a:hover {
-  border-color: #bbb;
-  transform: translateY(-2px);
+.contato-btn-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0px;
+  background: #fff;
+  color: #1a1a1a;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.contato-btn-wa:hover {
+  color: #272727;
+}
+
+.contato-btn-wa i {
+  font-size: 1.1rem;
+  color: #25D366;
+}
+
+.contato-email-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #8b949e;
+  transition: color 0.2s;
+}
+
+
+.contato-email-link i {
+  font-size: 0.95rem;
+}
+
+.contato-empresa {
+  margin-top: 28px;
+  font-size: 0.88rem;
+  color: #aaa;
+}
+
+.contato-empresa a {
+  color: #555;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+.contato-empresa a:hover {
+  color: #1a1a1a;
 }
 
 /* FOOTER */
 footer {
-  text-align: center;
-  padding: 24px;
-  background: #fff;
-  border-top: 1px solid #f0f0f0;
+  padding: 28px 20px;
+  background: #f8f8f8;
+  border-top: 1px solid #ebebeb;
+}
+
+.footer-inner {
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.footer-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
   font-size: 0.85rem;
-  color: #999;
+  color: #888;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #1a1a1a;
+}
+
+@media (max-width: 560px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
 }

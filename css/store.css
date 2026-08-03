@@ -8,101 +8,35 @@
   padding: 60px 20px 0;
 }
 
-.partner-banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 48px;
-  width: 100%;
-  height: 160px;
-  background: linear-gradient(135deg, #c5eefb 0%, #3bb6ec 100%);
-  margin-top: 60px;
-  padding: 0 48px;
-  text-decoration: none;
-  transition: filter 0.2s;
+/* HERO */
+.store-hero {
+  margin-bottom: 48px;
 }
 
-.partner-banner:hover {
-  filter: brightness(1.05);
-}
-
-.partner-banner-text {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.partner-banner-label {
+.store-eyebrow {
+  display: block;
   font-size: 0.72rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.partner-banner-name {
-  font-size: 2.6rem;
-  font-weight: 800;
-  color: #fff;
-  letter-spacing: 0.04em;
-  line-height: 1;
-  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
-}
-
-.partner-banner-name sup {
-  font-size: 0.45em;
-  vertical-align: super;
-  font-weight: 600;
-}
-
-.partner-banner-cta {
-  padding: 10px 28px;
-  background: rgba(255, 255, 255, 0.2);
-  border: 2px solid rgba(255, 255, 255, 0.75);
-  color: #fff;
-  border-radius: 25px;
-  font-size: 0.88rem;
-  font-weight: 600;
-  white-space: nowrap;
-  transition: background 0.2s;
-}
-
-.partner-banner:hover .partner-banner-cta {
-  background: rgba(255, 255, 255, 0.35);
-}
-
-@media (max-width: 600px) {
-  .partner-banner {
-    flex-direction: column;
-    height: auto;
-    padding: 32px 24px;
-    gap: 16px;
-    text-align: center;
-  }
-
-  .partner-banner-name {
-    font-size: 2rem;
-  }
-}
-
-.store-hero {
-  text-align: center;
-  margin-bottom: 48px;
+  color: #999;
+  margin-bottom: 10px;
 }
 
 .store-hero h2 {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  color: #1a1a1a;
 }
 
 .store-hero p {
   color: #888;
-  font-size: 1rem;
-  font-style: italic;
+  font-size: 0.95rem;
 }
 
+/* GRID */
 .store-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -110,6 +44,7 @@
   align-items: start;
 }
 
+/* CARD */
 .store-card {
   border: 1px solid #e8e8e8;
   border-radius: 12px;
@@ -148,6 +83,12 @@
 .store-card-img--app i {
   color: #01875f;
   opacity: 1;
+}
+
+.store-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .store-card-body {
@@ -192,6 +133,10 @@
   color: #1a1a1a;
 }
 
+.store-price--free {
+  color: #01875f;
+}
+
 .store-btn {
   padding: 8px 20px;
   background: #1a1a1a;
@@ -206,10 +151,6 @@
   background: #895f4a;
 }
 
-.store-price--free {
-  color: #01875f;
-}
-
 .store-btn--play {
   background: #01875f;
   display: flex;
@@ -221,20 +162,7 @@
   background: #016b4c;
 }
 
-/* PROMO CARD */
-.store-card--promo {
-  border-color: #f0e0ee;
-}
-
-.store-card-img--edu {
-  background: #fff;
-  border-bottom-color: #f0e0ee;
-}
-
-.store-tag--promo {
-  color: #E91E8C;
-}
-
+/* COUPON */
 .promo-coupon {
   display: flex;
   align-items: center;
@@ -273,9 +201,162 @@
   border-color: #E91E8C;
 }
 
-.promo-discount {
+/* PARTNERS */
+.store-partners {
+  margin-top: 64px;
+  padding-top: 40px;
+  border-top: 1px solid #ebebeb;
+}
+
+.store-section-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #bbb;
+  margin-bottom: 16px;
+}
+
+.partner-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 28px 36px;
+  background: linear-gradient(135deg, #4faac5 0%, #3bb6ec 100%);
+  border-radius: 16px;
+  text-decoration: none;
+  transition: filter 0.2s;
+}
+
+.partner-card:hover {
+  filter: brightness(1.04);
+}
+
+.partner-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.partner-card-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.partner-card-name {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+.partner-card-name sup {
+  font-size: 0.45em;
+  vertical-align: super;
+  font-weight: 600;
+}
+
+.partner-card-desc {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 2px;
+}
+
+.partner-card-cta {
+  flex-shrink: 0;
+  padding: 10px 26px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  color: #fff;
+  border-radius: 25px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.partner-card:hover .partner-card-cta {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* FocusEdu partner card */
+.partner-card--edu {
+  background: #fff;
+  border: 1px solid #f0d8ee;
+  padding: 0;
+  overflow: hidden;
+  margin-top: 16px;
+}
+
+.partner-card--edu:hover {
+  filter: none;
+  box-shadow: 0 8px 28px rgba(233, 30, 140, 0.1);
+}
+
+.partner-edu-img {
+  width: 200px;
+  align-self: stretch;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.partner-edu-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.partner-card--edu .partner-card-info {
+  padding: 28px 24px;
+  flex: 1;
+}
+
+.partner-card--edu .partner-card-eyebrow {
+  color: rgba(233, 30, 140, 0.55);
+}
+
+.partner-card--edu .partner-card-name {
+  font-size: 1.5rem;
+  color: #1a1a1a;
+}
+
+.partner-card--edu .partner-card-desc {
+  color: #888;
+}
+
+.partner-card--edu .partner-card-cta {
+  flex-shrink: 0;
+  margin-right: 32px;
+  background: transparent;
+  border-color: #E91E8C;
   color: #E91E8C;
-  font-size: 1.2rem;
+}
+
+.partner-card--edu:hover .partner-card-cta {
+  background: #E91E8C;
+  color: #fff;
+}
+
+@media (max-width: 860px) {
+  .partner-card--edu {
+    flex-direction: column;
+  }
+
+  .partner-edu-img {
+    width: 100%;
+    height: 160px;
+    align-self: auto;
+  }
+
+  .partner-card--edu .partner-card-cta {
+    margin: 0 0 24px 24px;
+  }
 }
 
 /* SKELETON */
@@ -378,15 +459,20 @@
   background: #895f4a;
 }
 
-.store-card-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 @media (max-width: 860px) {
   .store-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .partner-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 24px;
+  }
+
+  .partner-card-name {
+    font-size: 1.6rem;
   }
 }
 
