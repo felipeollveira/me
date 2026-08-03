@@ -1,17 +1,23 @@
+function show(el) { if (el) el.style.display = ''; }
+function hide(el) { if (el) el.style.display = 'none'; }
+
+const contato = () => document.querySelector('.contato');
+const footer  = () => document.querySelector('footer');
+
 const routes = {
   '/': () => {
-    document.querySelector('.hero').style.display = '';
-    document.querySelector('.portfolio').style.display = '';
-    document.getElementById('store').style.display = 'none';
-    document.querySelector('.contato').style.display = '';
-    document.querySelector('footer').style.display = '';
+    show(document.querySelector('.hero'));
+    show(document.querySelector('.portfolio'));
+    hide(document.getElementById('store'));
+    show(contato());
+    show(footer());
   },
   '/store': () => {
-    document.querySelector('.hero').style.display = 'none';
-    document.querySelector('.portfolio').style.display = 'none';
-    document.getElementById('store').style.display = '';
-    document.querySelector('.contato').style.display = 'none';
-    document.querySelector('footer').style.display = 'none';
+    hide(document.querySelector('.hero'));
+    hide(document.querySelector('.portfolio'));
+    show(document.getElementById('store'));
+    hide(contato());
+    hide(footer());
     if (typeof fetchStoreProducts === 'function') fetchStoreProducts();
   },
 };

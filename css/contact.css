@@ -99,7 +99,6 @@
 
 /* FOOTER */
 footer {
-  padding: 28px 20px;
   background: #f8f8f8;
   border-top: 1px solid #ebebeb;
 }
@@ -107,12 +106,12 @@ footer {
 .footer-inner {
   max-width: 1130px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 28px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
   flex-wrap: wrap;
-  gap: 16px;
 }
 
 .footer-brand {
@@ -122,37 +121,78 @@ footer {
 }
 
 .footer-name {
-  font-size: 0.88rem;
-  font-weight: 600;
+  font-size: 0.92rem;
+  font-weight: 700;
   color: #1a1a1a;
+  letter-spacing: -0.01em;
 }
 
-.footer-copy {
-  font-size: 0.8rem;
+.footer-role {
+  font-size: 0.78rem;
   color: #aaa;
 }
 
 .footer-links {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 4px;
   flex-wrap: wrap;
 }
 
-.footer-links a {
-  font-size: 0.85rem;
-  color: #888;
-  transition: color 0.2s;
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.83rem;
+  color: #666;
+  transition: background 0.15s, color 0.15s;
 }
 
-.footer-links a:hover {
+.footer-link:hover {
+  background: #ebebeb;
   color: #1a1a1a;
 }
 
-@media (max-width: 560px) {
+.footer-link i {
+  font-size: 0.88rem;
+}
+
+.footer-sep {
+  display: inline-block;
+  width: 1px;
+  height: 16px;
+  background: #ddd;
+  margin: 0 4px;
+}
+
+.footer-link--company {
+  font-weight: 600;
+  color: #555;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ebebeb;
+  padding: 12px 40px;
+  text-align: center;
+}
+
+.footer-bottom span {
+  font-size: 0.76rem;
+  color: #bbb;
+}
+
+@media (max-width: 640px) {
   .footer-inner {
+    padding: 24px 20px;
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
+  }
+
+  .footer-bottom {
+    padding: 12px 20px;
+    text-align: left;
   }
 }
