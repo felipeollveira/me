@@ -24,6 +24,9 @@ const observer = new IntersectionObserver(entries => {
 
 function openModal(project) {
   currentModalProject = project;
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'project_click', { project_name: project.title });
+  }
   const iframe = document.getElementById('modal-img');
   iframe.src = project.image || '';
   iframe.title = project.title;
