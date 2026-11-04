@@ -2,6 +2,9 @@ const STORE_API_URL = 'https://projects-tau-pearl.vercel.app/api/products';
 
 function copyPromoCode(btn) {
   navigator.clipboard.writeText('FE2026DU').then(() => {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'promo_code_copy', { code: 'FE2026DU' });
+    }
     btn.textContent = 'Copiado ✓';
     setTimeout(() => { btn.textContent = 'Copiar'; }, 2000);
   });
@@ -97,6 +100,14 @@ async function fetchStoreProducts() {
 
     const products = await res.json();
     grid.innerHTML = products.map(renderStoreCard).join('');
+    grid.querySelectorAll('.store-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const title = btn.closest('.store-card')?.querySelector('h3')?.textContent?.trim();
+        if (typeof gtag !== 'undefined' && title) {
+          gtag('event', 'store_product_click', { product_name: title });
+        }
+      });
+    });
   } catch (err) {
     console.error('Falha ao carregar produtos:', err);
     renderError(grid);

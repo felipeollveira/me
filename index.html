@@ -263,6 +263,34 @@
   <script type="text/javascript" src="js/display.js"></script>
   <script type="text/javascript" src="js/data.js"></script>
   <script type="text/javascript" src="js/store.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('#links .link-card').forEach(link => {
+        link.addEventListener('click', () => {
+          const label = link.querySelector('.link-card-label')?.textContent?.trim();
+          if (typeof gtag !== 'undefined' && label) {
+            gtag('event', 'link_page_click', { link_name: label });
+          }
+        });
+      });
+      document.querySelectorAll('.partner-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const name = card.querySelector('.partner-card-name')?.textContent?.trim();
+          if (typeof gtag !== 'undefined' && name) {
+            gtag('event', 'partner_click', { partner_name: name });
+          }
+        });
+      });
+      document.querySelectorAll('.footer-link').forEach(link => {
+        link.addEventListener('click', () => {
+          const label = link.textContent?.trim();
+          if (typeof gtag !== 'undefined' && label) {
+            gtag('event', 'footer_link_click', { link_name: label });
+          }
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>

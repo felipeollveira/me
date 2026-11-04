@@ -37,6 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelector(".filters button.active").classList.remove("active");
       btn.classList.add("active");
       const filter = btn.getAttribute("data-filter");
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'filter_click', { filter_name: filter });
+      }
       const filteredProjects = filter === "all"
         ? allProjects
         : allProjects.filter(project => project.category === filter);
@@ -48,6 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'language_switch', { language: btn.dataset.lang });
+      }
       setLanguage(btn.dataset.lang);
       fetchProjects(btn.dataset.lang);
     });

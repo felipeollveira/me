@@ -46,8 +46,14 @@ function openModal(project) {
   if (project.link) {
     linkEl.href = project.link;
     linkEl.classList.remove('hidden');
+    linkEl.onclick = () => {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'project_link_click', { project_name: project.title });
+      }
+    };
   } else {
     linkEl.classList.add('hidden');
+    linkEl.onclick = null;
   }
 
   document.getElementById('project-modal').classList.add('open');
