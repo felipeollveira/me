@@ -36,6 +36,9 @@ function handleRoute() {
   const hash = window.location.hash.replace('#', '') || '/';
   const handler = routes[hash] || routes['/'];
   handler();
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'page_view', { page_path: hash });
+  }
 }
 
 window.addEventListener('hashchange', handleRoute);
